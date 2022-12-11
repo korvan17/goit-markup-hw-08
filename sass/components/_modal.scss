@@ -1,0 +1,158 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--trans-slow);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform var(--trans-slow);
+
+  width: 528px;
+  height: 581px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+}
+
+.modal-button-icon:hover {
+  fill: var(--color-accent);
+  cursor: pointer;
+}
+
+.block-form {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-form {
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.label-item-form {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.input-form {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 43px;
+  transition: outline-color var(--trans);
+  &:focus {
+    outline: 1px solid var(--color-accent);
+  }
+}
+
+.input-form:focus + .icon-form {
+  fill: var(--color-accent);
+}
+
+.input-conteiner-form {
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+  transition: fill var(--trans);
+}
+
+.block-form textarea {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  margin-bottom: 20px;
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+  }
+}
+
+.label-plicy-form {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  color: var(--color-grey);
+  padding-left: 36px;
+  margin-bottom: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    margin-left: 12px;
+    width: 16px;
+    height: 15px;
+    /* background-color: black; */
+    border: 2px solid var(--color-black);
+    border-radius: 2px;
+  }
+}
+
+.link-form {
+  color: var(--color-accent);
+}
+
+.checkbox-policy:checked + .label-plicy-form::before {
+  border: none;
+  background-image: url(../../images/icon\ check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
