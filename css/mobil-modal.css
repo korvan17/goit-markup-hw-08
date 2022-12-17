@@ -1,0 +1,35 @@
+.mobil-model {
+  position: absolute;
+  top: 0;
+  width: 480px;
+  height: 796px;
+  background-color: var(--color-white);
+}
+
+.mobil-modal__nav-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+
+.mobil-modal__contact-link {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+}
+
+.mobil-modal__soc-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+}
+
+.mail {
+  color: var(--color-gray);
+}/*# sourceMappingURL=mobil-modal.css.map */

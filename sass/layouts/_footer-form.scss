@@ -2,6 +2,14 @@
     display: flex;
     margin-left: 93px;
     align-items: flex-end;
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 60px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 450px;
+    }
 }
 
 /* .footer-form-title {
@@ -23,6 +31,10 @@
     text-transform: uppercase;
     color: #ffffff;
     gap: 20px;
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 .footer-form-input {
@@ -62,6 +74,9 @@
     font-size: 16px;
     line-height: calc(30 / 16);
     letter-spacing: 0.06em;
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+    }
 }
 
 .footer-form-icon {

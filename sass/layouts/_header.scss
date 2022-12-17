@@ -7,6 +7,12 @@
 .header__conteiner {
   display: flex;
   height: 31px;
+  @include mobile {
+    max-width: 100%;
+  }
+  @include mobToTab {
+    max-width: 100%;
+  }
 }
 
 .navigation {
@@ -23,15 +29,46 @@
 }
 
 .list.navigation {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
   gap: 50px;
   margin-left: auto;
 }
 
-.nav.list.navigation {
-  margin-left: 93px;
+.header__mobile-button {
+  display: none;
+  @media screen and (max-width: 480px) {
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    border: none;
+    background-color: transparent;
+  }
 }
 
-.nav-li-contact {
+.nav.list.navigation {
+  margin-left: 93px;
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    margin-left: 88px;
+  }
+}
+
+.list.navigation.contact {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    width: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    // justify-content: center;
+    gap: 10px;
+    // border: 1px solid red;
+    margin-right: 15px;
+  }
 }
 
 .header-contact {

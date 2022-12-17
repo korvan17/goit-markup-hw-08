@@ -8,6 +8,11 @@
 .footer-block {
   display: flex;
   align-items: baseline;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .address {
@@ -18,6 +23,9 @@
 
 .address-link {
   color: rgba(255, 255, 255, 0.6);
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .address-item.mail {
@@ -25,11 +33,25 @@
   margin-bottom: 9px;
 }
 
+.logo-address {
+  margin-top: 28px;
+  width: 236px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
 .address-link,
 .geopzition-link {
   transition: color var(--trans);
   width: 231px;
   display: block;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 
   &:hover,
   &:focus {
@@ -39,6 +61,15 @@
 
 .socialmesh-footer {
   margin-left: 70px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    margin-top: 60px;
+    display: inline-block;
+    margin-left: 0;
+  }
 }
 
 .footer-text-soc {
@@ -48,12 +79,16 @@
   line-height: calc(16 / 14);
   text-transform: uppercase;
   color: var(--color-white);
+  text-align: center;
 }
 
 .footer-socialmesh-ul {
   margin-top: 20px;
   display: flex;
   gap: 10px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .footer-socialmesh-li {
