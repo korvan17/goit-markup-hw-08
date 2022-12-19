@@ -68,6 +68,8 @@
 .mobil-modal__soc-list {
   margin-top: 64px;
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   gap: 20px;
 }
 .mobil-modal__soc-item {
@@ -109,4 +111,3 @@
   letter-spacing: 0.02em;
   color: var(--color-grey);
 }
-

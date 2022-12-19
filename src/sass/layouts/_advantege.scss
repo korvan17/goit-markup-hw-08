@@ -29,7 +29,7 @@
   align-items: center;
   gap: 30px;
   // max-width: 100%;
-  
+
   @include tablet {
     max-width: 768px;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
   height: 120px;
   background: var(--bcg-grey);
   border-radius: 4px;
-  
+
   @include tablet {
     width: 354px;
   }
@@ -62,7 +62,10 @@
   line-height: 1.14;
   text-transform: uppercase;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
+  @include tablet {
+    text-align: left;
+  }
   // width: 100%;
 }
 
